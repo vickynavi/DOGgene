@@ -210,7 +210,7 @@
                                         AlignmentX="Left"/>
                         </TextBox.Background>
                     </TextBox>
-                    
+
                     <TextBlock Text="Your dog's sequence(.FASTA,.txt,etc):"
                                TextAlignment="Center"
                                Foreground="DarkGray"
@@ -282,11 +282,12 @@
 
                 </StackPanel>
                 <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="270,410,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="320" Margin="553,70,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="213" TextChanged="TextBox_TextChanged"/>
 
             </Grid>
 
         </Border>
-        
+
     </Border>
 
 </Window>

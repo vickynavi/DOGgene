@@ -44,10 +44,29 @@ namespace WPF_LoginForm.View
         {
             Application.Current.Shutdown();
         }
+        public void ExecuteCommand(string _Command)
+        {
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"6 qseqid pident length stitle\" ");
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo = procStartInfo;
+            proc.Start();
+            proc.WaitForExit();
+            string result = proc.StandardOutput.ReadToEnd();
+            textBox1.Text = result;
+        }
+        public void Main()
+        {
+            //string command = "blastn";
+            ExecuteCommand("blastn -n");
 
+        }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            
+            Main();
+
         }
 
         private void seq_Click(object sender, RoutedEventArgs e)
@@ -68,11 +87,14 @@ namespace WPF_LoginForm.View
                     line = sr.ReadLine();
                 }
                 sr.Close();
-                label1.Content = "" + lista[20000];
+                //label1.Content = "" + lista[20000];
             }
             
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
+        }
     }
 }
