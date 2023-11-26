@@ -46,7 +46,7 @@ namespace WPF_LoginForm.View
         }
         public void ExecuteCommand(string _Command)
         {
-            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"6 qseqid pident length stitle\" ");
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"10 stitle pident\" ");
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.UseShellExecute = false;
             procStartInfo.CreateNoWindow = true;
