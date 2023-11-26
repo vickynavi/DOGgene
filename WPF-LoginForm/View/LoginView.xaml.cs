@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -44,9 +45,9 @@ namespace WPF_LoginForm.View
         {
             Application.Current.Shutdown();
         }
-        public void ExecuteCommand(string _Command)
+        public void ExecuteCommand()
         {
-            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"10 stitle pident\" ");
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"10 stitle pident\" -task dc-megablast -template_length 16 -template_type optimal");
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.UseShellExecute = false;
             procStartInfo.CreateNoWindow = true;
@@ -55,13 +56,15 @@ namespace WPF_LoginForm.View
             proc.Start();
             proc.WaitForExit();
             string result = proc.StandardOutput.ReadToEnd();
+            string[] valores = result.Split(new[] { '\n', }, StringSplitOptions.RemoveEmptyEntries);
+            Dictionary<string, string> dictionary =
+                      valores.ToDictionary(s => s.Split(',')[0], s => s.Split(',')[1]);
+            label1.Content= dictionary["Cistinuria1"];
             textBox1.Text = result;
         }
         public void Main()
         {
-            //string command = "blastn";
-            ExecuteCommand("blastn -n");
-
+            ExecuteCommand();
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
