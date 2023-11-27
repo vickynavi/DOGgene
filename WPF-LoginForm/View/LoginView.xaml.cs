@@ -87,7 +87,7 @@ namespace WPF_LoginForm.View
                 Variables.filePath = openFileDialog.FileName;
             }
         }
-
+        
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 

@@ -194,7 +194,7 @@
                                    FontFamily="Montserrat"
                                    TextAlignment="Center" 
                                    Height="34"
-                                   TextWrapping="Wrap"><Run Text="The genes that are analyzed are: cystinuria, hip dysplasia, congenital deafness, narcolepsy, PRA, and phenotype analysis of short coat, heat tolerance, elongated muzzle, large bones"/><Run Language="es-es" Text=" and "/><Run Text="aggressive"/><Run Text=" features."/></TextBlock>
+                                   TextWrapping="Wrap" Text="The genes analyzed here are a calculated probability based on blastn. They do not necessarily determine a phenotypic characteristic or a genetic disease; this is just a statistical approximation made for simulation purposes."/>
                     </StackPanel>
                     <StackPanel
                         Grid.Row="1"
