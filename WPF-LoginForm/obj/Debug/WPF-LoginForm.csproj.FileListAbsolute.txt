@@ -68,3 +68,5 @@ C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\WPF-LoginF
 C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\WPF-LoginForm.pdb
 C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\Resultados.g.cs
 C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\Resultados.baml
+C:\Users\Derek\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\Resultados.g.cs
+C:\Users\Derek\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\Resultados.baml

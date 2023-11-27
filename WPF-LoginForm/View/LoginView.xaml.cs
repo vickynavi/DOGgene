@@ -66,7 +66,7 @@ namespace WPF_LoginForm.View
             string[] valores = result.Split(new[] { '\n', }, StringSplitOptions.RemoveEmptyEntries);
             Dictionary<string, string> Blast =
                       valores.ToDictionary(s => s.Split(',')[0], s => s.Split(',')[1]);
-            Variables.Cystinuria1 = Blast["Cystinuria1"].ToString();
+            Variables.Blast1 = Blast;
             return Variables.Blast1;
         }
 

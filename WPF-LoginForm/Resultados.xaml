@@ -234,7 +234,7 @@
                                FontSize="17"
                                FontWeight="Medium"
                                HorizontalAlignment="Center"/>
-                        <TextBlock Text="70%"
+                        <TextBlock x:Name="HypDysplasiatb" Text="70%"
                                Foreground="Lavender"
                                FontFamily="Montserrat"
                                FontSize="17"
@@ -249,7 +249,7 @@
                                FontSize="17"
                                FontWeight="Medium"
                                HorizontalAlignment="Center"/>
-                        <TextBlock Text="70%"
+                        <TextBlock x:Name="CongenitalDeafnesstb" Text="70%"
                                Foreground="Lavender"
                                FontFamily="Montserrat"
                                FontSize="17"
@@ -264,7 +264,7 @@
                                FontSize="17"
                                FontWeight="Medium"
                                HorizontalAlignment="Center"/>
-                        <TextBlock Text="70%"
+                        <TextBlock x:Name="Narcolepsytb" Text="70%"
                                Foreground="Lavender"
                                FontFamily="Montserrat"
                                FontSize="17"
@@ -273,13 +273,13 @@
                                Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/8.png"
                                Width="40"></Image>
-                        <TextBlock Text="Progressive Retinal Atrophys"
+                        <TextBlock Text="Progressive Retinal Atrophy"
                                Foreground="#28AEED"
                                FontFamily="Montserrat"
                                FontSize="17"
                                FontWeight="Medium"
                                HorizontalAlignment="Center"/>
-                        <TextBlock Text="70%"
+                        <TextBlock x:Name="ProgressiveRetinalAtrophytb" Text="70%"
                                Foreground="Lavender"
                                FontFamily="Montserrat"
                                FontSize="17"
@@ -440,7 +440,7 @@
                             FontSize="17"
                             FontWeight="Medium"
                             HorizontalAlignment="Center"/>
-                        <TextBlock 
+                        <TextBlock x:Name="ShortCoattb" 
                             Text="70%"
                             Foreground="Lavender"
                             FontFamily="Montserrat"
@@ -457,7 +457,7 @@
                             FontSize="17"
                             FontWeight="Medium"
                             HorizontalAlignment="Center"/>
-                        <TextBlock 
+                        <TextBlock x:Name="HeatTolerancetb" 
                             Text="70%"
                             Foreground="Lavender"
                             FontFamily="Montserrat"
@@ -475,7 +475,7 @@
                             FontSize="17"
                             FontWeight="Medium"
                             HorizontalAlignment="Center"/>
-                        <TextBlock 
+                        <TextBlock x:Name="ElongatedMuzzletb" 
                             Text="70%"
                             Foreground="Lavender"
                             FontFamily="Montserrat"
@@ -492,7 +492,7 @@
                             FontSize="17"
                             FontWeight="Medium"
                             HorizontalAlignment="Center"/>
-                        <TextBlock 
+                        <TextBlock x:Name="LargeBonestb" 
                             Text="70%"
                             Foreground="Lavender"
                             FontFamily="Montserrat"
@@ -509,7 +509,7 @@
                             FontSize="17"
                             FontWeight="Medium"
                             HorizontalAlignment="Center"/>
-                        <TextBlock 
+                        <TextBlock x:Name="Agressivetb" 
                             Text="70%"
                             Foreground="Lavender"
                             FontFamily="Montserrat"
