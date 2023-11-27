@@ -19,12 +19,25 @@ namespace WPF_LoginForm
     /// </summary>
     public partial class Resultados : Window
     {
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
 
         public Resultados(string nombreperro, string nombrehumano)
         {
             InitializeComponent();
             resultadosnombre.Text= resultadosnombre.Text + nombreperro;
             resultadoshumano.Text = $"Hello {nombrehumano}, " + resultadoshumano.Text;
+            Cystinuriatb.Text = Variables.Cystinuria1;
         }
 
 

@@ -10,7 +10,8 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Grid>
         <Border CornerRadius="12">
             <Border.Background>
@@ -176,36 +177,175 @@
                                    FontWeight="Bold"
                                    FontFamily="Montserrat"
                                    HorizontalAlignment="Center"></TextBlock>
-                        <TextBlock x:Name="resultadoshumano" Text="this analysis was made using a DOGgene dataset created to analyze your dog's genome using the blastn software from NCBI"
+                        <TextBlock x:Name="resultadoshumano" Text="this analysis was made using a DOGgene dataset created to analyze your dog's genome using the blastn software (NCBI)"
                                    Foreground="LightBlue"
                                    FontSize="11"
-                                   FontWeight="Light"
+                                   FontWeight="Medium"
                                    FontFamily="Montserrat"
-                                   HorizontalAlignment="Center" Width="674" 
+                                   TextAlignment="Center" 
+                                   Width="674"
+                                   TextWrapping="Wrap"
+                                   
                                    ></TextBlock>
-                        <TextBlock Text="The genes that are analized are: cistinuria, ..."
+                        <TextBlock Text="The genes that are analyzed are: cystinuria, hip dysplasia, congenital deafness, narcolepsy, PRA, and phenotype analysis of short coat, heat tolerance, elongated muzzle, large bones, aggressive, and obedient features."
                                    Foreground="LightBlue"
                                    FontSize="11"
                                    FontWeight="Light"
                                    FontFamily="Montserrat"
-                                   HorizontalAlignment="Center"></TextBlock>
+                                   TextAlignment="Center" 
+                                   Height="34"
+                                   TextWrapping="Wrap"></TextBlock>
                     </StackPanel>
                     <StackPanel
+                       
                         Grid.Row="1"
                         Orientation="Vertical"
-                        Margin="20,120,450,30" RenderTransformOrigin="0.5,0.5">
+                        Margin="50,120,450,30" RenderTransformOrigin="0.5,0.5">
                         <TextBlock Text="Genetic diseases"
                                    Foreground="#DA34AE"
                                    FontFamily="Montserrat"
                                    FontSize="17"
-                                   FontWeight="Medium"
+                                   FontWeight="ExtraBold"
                                    HorizontalAlignment="Center"></TextBlock>
 
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="213*"/>
+                                <ColumnDefinition Width="175*"/>
+                                <ColumnDefinition Width="39*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Cystinuria"
+                            Foreground="#28AEED"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="Cystinuriatb" Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Left" 
+                            RenderTransformOrigin="0.515,-0.137" Grid.Column="2"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="119*"/>
+                                <ColumnDefinition Width="29*"/>
+                                <ColumnDefinition Width="51*"/>
+                                <ColumnDefinition Width="112*"/>
+                                <ColumnDefinition Width="36*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Hip dysplasia"
+                             Foreground="#28AEED"
+                             FontFamily="Montserrat"
+                             FontSize="17"
+                             FontWeight="Medium" Grid.ColumnSpan="2" Margin="0,0,54,0"/>
+                            <TextBlock Text="70%"
+                             Foreground="Lavender"
+                             FontFamily="Montserrat"
+                             FontSize="17"
+                             FontWeight="Medium"
+                             HorizontalAlignment="Center" 
+                             RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="35"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="119*"/>
+                                <ColumnDefinition Width="29*"/>
+                                <ColumnDefinition Width="51*"/>
+                                <ColumnDefinition Width="112*"/>
+                                <ColumnDefinition Width="36*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Congenital deafness"
+                            Foreground="#28AEED"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium" Grid.ColumnSpan="2" Margin="0,0,9,0"/>
+                            <TextBlock Text="70%"
+                             Foreground="Lavender"
+                             FontFamily="Montserrat"
+                             FontSize="17"
+                             FontWeight="Medium"
+                             HorizontalAlignment="Center" 
+                             RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="37"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="119*"/>
+                                <ColumnDefinition Width="29*"/>
+                                <ColumnDefinition Width="51*"/>
+                                <ColumnDefinition Width="112*"/>
+                                <ColumnDefinition Width="36*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Narcolepsy"
+                            Foreground="#28AEED"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium" Grid.ColumnSpan="2" Margin="0,0,9,0"/>
+                            <TextBlock Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center" 
+                            RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="37"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="119*"/>
+                                <ColumnDefinition Width="29*"/>
+                                <ColumnDefinition Width="51*"/>
+                                <ColumnDefinition Width="112*"/>
+                                <ColumnDefinition Width="36*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Progressive Retinal Atrophy"
+                            Foreground="#28AEED"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium" Grid.ColumnSpan="4" Margin="0,0,26,0"/>
+                            <TextBlock Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center" 
+                            RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="37"/>
+                        </Grid>
                     </StackPanel>
                     <StackPanel
                         Grid.Row="1"
                         Orientation="Vertical"
-                        Margin="470,120,20,30" RenderTransformOrigin="0.5,0.5">
+                        Margin="470,120,50,30" RenderTransformOrigin="0.5,0.5">
                         <TextBlock Text="Phenotype"
                         Foreground="BlueViolet"
                         FontFamily="Montserrat"
@@ -213,6 +353,170 @@
                         FontWeight="Medium"
                         HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
+                    <Grid Margin="488,139,20,405" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="213*"/>
+                            <ColumnDefinition Width="175*"/>
+                            <ColumnDefinition Width="39*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                        Foreground="#DA3"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium"
+                        HorizontalAlignment="Left" Margin="0,0,0,2"><Run Language="es-es" Text="Short coat"/></TextBlock>
+                        <TextBlock Text="70%"
+                        Foreground="Lavender"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium" 
+                        RenderTransformOrigin="0.515,-0.137" Grid.Column="1" Margin="131,1,28,0" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+                    </Grid>
+                    <Grid Margin="488,161,50,384" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="48*"/>
+                            <ColumnDefinition Width="143*"/>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="161*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                        Foreground="#DA3"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium"
+                        HorizontalAlignment="Left" Margin="0,0,0,3" Grid.ColumnSpan="2"><Run Language="en-en" Text="Heat Tolerance"/></TextBlock>
+                        <TextBlock Text="70%"
+                        Foreground="Lavender"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium" 
+                        RenderTransformOrigin="0.515,-0.137" Grid.Column="3" Margin="128,-1,-2,-1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="-1.73"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="-0.427"/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                    </Grid>
+                    <Grid Margin="488,181,50,359" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="48*"/>
+                            <ColumnDefinition Width="143*"/>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="161*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                        Foreground="#DA3"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium"
+                        HorizontalAlignment="Left" Margin="0,0,0,3" Grid.ColumnSpan="2"><Run Text="Elo"/><Run Language="es-es" Text="n"/><Run Text="gated muzzle"/></TextBlock>
+                        <TextBlock Text="70%"
+                        Foreground="Lavender"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium" 
+                        RenderTransformOrigin="0.515,-0.137" Grid.Column="3" Margin="128,-1,-2,-1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="-1.73"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="-0.427"/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                    </Grid>
+                    <Grid Margin="488,200,50,342" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="48*"/>
+                            <ColumnDefinition Width="143*"/>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="161*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                        Foreground="#DA3"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium"
+                        HorizontalAlignment="Left" Margin="0,0,0,3" Grid.ColumnSpan="2"><Run Language="es-es" Text="Large Bones"/></TextBlock>
+                        <TextBlock Text="70%"
+                        Foreground="Lavender"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium" 
+                        RenderTransformOrigin="0.515,-0.137" Grid.Column="3" Margin="128,-1,-2,-1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="-1.73"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="-0.427"/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                    </Grid>
+                    <Grid Margin="488,218,50,324" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="48*"/>
+                            <ColumnDefinition Width="143*"/>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="161*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+    Foreground="#DA3"
+    FontFamily="Montserrat"
+    FontSize="17"
+    FontWeight="Medium"
+    HorizontalAlignment="Left" Margin="0,0,0,3" Grid.ColumnSpan="2"><Run Language="es-es" Text="Agressive"/></TextBlock>
+                        <TextBlock Text="70%"
+    Foreground="Lavender"
+    FontFamily="Montserrat"
+    FontSize="17"
+    FontWeight="Medium" 
+    RenderTransformOrigin="0.515,-0.137" Grid.Column="3" Margin="128,-1,-2,-1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="-1.73"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="-0.427"/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                    </Grid>
                 </Grid>
 
             </Border>

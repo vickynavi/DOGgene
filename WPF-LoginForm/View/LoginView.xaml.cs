@@ -30,7 +30,13 @@ namespace WPF_LoginForm.View
             InitializeComponent();
         }
         ArrayList lista = new ArrayList();
-    
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -46,9 +52,9 @@ namespace WPF_LoginForm.View
         {
             Application.Current.Shutdown();
         }
-        public void ExecuteCommand()
+        public Dictionary<string, string> ExecuteCommand()
         {
-            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"10 stitle pident\" -task dc-megablast -template_length 16 -template_type optimal");
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"10 stitle pident\" -task dc-megablast -template_length 16 -template_type optimal -max_hsps 1");
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.UseShellExecute = false;
             procStartInfo.CreateNoWindow = true;
@@ -58,18 +64,15 @@ namespace WPF_LoginForm.View
             proc.WaitForExit();
             string result = proc.StandardOutput.ReadToEnd();
             string[] valores = result.Split(new[] { '\n', }, StringSplitOptions.RemoveEmptyEntries);
-            Dictionary<string, float> dictionary =
-                      valores.ToDictionary(s => s.Split(',')[0], s => float.Parse(s.Split(',')[1], CultureInfo.InvariantCulture));
-            label1.Content= dictionary["Cistinuria1"];
-            textBox1.Text = result;
+            Dictionary<string, string> Blast =
+                      valores.ToDictionary(s => s.Split(',')[0], s => s.Split(',')[1]);
+            Variables.Cystinuria1 = Blast["Cystinuria1"].ToString();
+            return Variables.Blast1;
         }
-        public void Main()
-        {
-            ExecuteCommand();
-        }
+
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Main();
+            Dictionary<string, string> Blast1 = ExecuteCommand();
             string nombreperro = dogsnametb.Text.ToString();
             string nombrehumano = ownersnametb.Text.ToString();
             Resultados resultados = new Resultados(nombreperro, nombrehumano);
