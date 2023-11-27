@@ -29,7 +29,6 @@ namespace WPF_LoginForm.View
         {
             InitializeComponent();
         }
-        ArrayList lista = new ArrayList();
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -54,7 +53,7 @@ namespace WPF_LoginForm.View
         }
         public Dictionary<string, string> ExecuteCommand()
         {
-            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + "blastn -db FENOTIPO -query sujeto.fasta -outfmt \"10 stitle pident\" -task dc-megablast -template_length 16 -template_type optimal -max_hsps 1");
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + $"blastn -db FENOTIPO -query {Variables.filePath} -outfmt \"10 stitle pident\" -task dc-megablast -template_length 16 -template_type optimal -max_hsps 1 -perc_identity 100");
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.UseShellExecute = false;
             procStartInfo.CreateNoWindow = true;
@@ -72,7 +71,7 @@ namespace WPF_LoginForm.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Dictionary<string, string> Blast1 = ExecuteCommand();
+            ExecuteCommand();
             string nombreperro = dogsnametb.Text.ToString();
             string nombrehumano = ownersnametb.Text.ToString();
             Resultados resultados = new Resultados(nombreperro, nombrehumano);
@@ -81,26 +80,12 @@ namespace WPF_LoginForm.View
         }
 
         private void seq_Click(object sender, RoutedEventArgs e)
-        {
-            string filePath;
-            string line;
-            
+        {         
             OpenFileDialog openFileDialog = new OpenFileDialog();            
             if (openFileDialog.ShowDialog() == true)
             {
-                filePath = openFileDialog.FileName;
-
-                StreamReader sr = new StreamReader(filePath);
-                line = sr.ReadLine();
-                while (line != null)
-                {
-                    lista.Add(line);
-                    line = sr.ReadLine();
-                }
-                sr.Close();
-                //label1.Content = "" + lista[20000];
+                Variables.filePath = openFileDialog.FileName;
             }
-            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

@@ -234,7 +234,7 @@
                                FontSize="17"
                                FontWeight="Medium"
                                HorizontalAlignment="Center"/>
-                        <TextBlock x:Name="HypDysplasiatb" Text="70%"
+                        <TextBlock x:Name="HipDysplasiatb" Text="70%"
                                Foreground="Lavender"
                                FontFamily="Montserrat"
                                FontSize="17"
@@ -494,7 +494,7 @@
                             HorizontalAlignment="Center"/>
                         <TextBlock x:Name="LargeBonestb" 
                             Text="70%"
-                            Foreground="Lavender"
+                            Foreground="#FFFAE6E6"
                             FontFamily="Montserrat"
                             FontSize="17"
                             FontWeight="Medium"

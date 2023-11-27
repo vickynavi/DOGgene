@@ -20,6 +20,8 @@ namespace WPF_LoginForm
         public static int contag = 0;
         public static int contob = 0;
 
+        public static string filePath;
+
         public static Dictionary<string, string> Blast1 = new Dictionary<string, string>();
     }
 }

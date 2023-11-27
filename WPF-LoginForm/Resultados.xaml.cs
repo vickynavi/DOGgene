@@ -79,22 +79,21 @@ namespace WPF_LoginForm
             {
                 if (probabilidades[i] == "0")
                     probabilidades[i] = "Can't be determinated";
-                
+
+                else probabilidades[i] = probabilidades[i] + "%";
             }
 
-            Cystinuriatb.Text = Variables.contc.ToString() + "%";
-            HypDysplasiatb.Text = Variables.conthd.ToString() + "%";
-            CongenitalDeafnesstb.Text = Variables.contcd.ToString() + "%";
-            Narcolepsytb.Text = Variables.contnar.ToString() + "%";
-            ProgressiveRetinalAtrophytb.Text = Variables.contpra.ToString() + "%";
+            Cystinuriatb.Text = probabilidades[5]; if (probabilidades[5]=="Can't be determinated") { Cystinuriatb.Foreground = Brushes.Fuchsia; }
+            ShortCoattb.Text= probabilidades[0]; if (probabilidades[0] == "Can't be determinated") { ShortCoattb.Foreground = Brushes.Fuchsia; }
+            ProgressiveRetinalAtrophytb.Text= probabilidades[1]; if (probabilidades[1] == "Can't be determinated") { ProgressiveRetinalAtrophytb.Foreground = Brushes.Fuchsia; }
+            HeatTolerancetb.Text= probabilidades[3]; if (probabilidades[3] == "Can't be determinated") { HeatTolerancetb.Foreground = Brushes.Fuchsia; }
+            Narcolepsytb.Text= probabilidades[4]; if (probabilidades[4] == "Can't be determinated") { Narcolepsytb.Foreground = Brushes.Fuchsia; }
+            HipDysplasiatb.Text= probabilidades[6]; if (probabilidades[6] == "Can't be determinated") { HipDysplasiatb.Foreground = Brushes.Fuchsia; }
+            CongenitalDeafnesstb.Text= probabilidades[7]; if (probabilidades[7] == "Can't be determinated") { CongenitalDeafnesstb.Foreground = Brushes.Fuchsia; }
+            ElongatedMuzzletb.Text= probabilidades[8]; if (probabilidades[8] == "Can't be determinated") { ElongatedMuzzletb.Foreground = Brushes.Fuchsia; }
+            LargeBonestb.Text= probabilidades[9]; if (probabilidades[9] == "Can't be determinated") { LargeBonestb.Foreground = Brushes.Fuchsia; }
+            Agressivetb.Text = probabilidades[2]; if (probabilidades[2] == "Can't be determinated") { Agressivetb.Foreground = Brushes.Fuchsia; }
 
-            ShortCoattb.Text = Variables.contsc.ToString() + "%";
-            HeatTolerancetb.Text = Variables.contht.ToString() + "%";
-            ElongatedMuzzletb.Text = Variables.contem.ToString() + "%";
-            LargeBonestb.Text = Variables.contlb.ToString() + "%";
-            Agressivetb.Text = Variables.contag.ToString() + "%";
-
-            
         }
 
 
