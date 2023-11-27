@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_LoginForm"
         mc:Ignorable="d"
-        Title="Resultados" Height="600" Width="900"
+        Title="Resultados" Height="680" Width="900"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -53,7 +53,7 @@
                             <ColumnDefinition Width="5"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="39andThem Results"
+                        <TextBlock Text="39andThem Results                                                                                                                                                                                           Made by Derek Meneses and Victoria Valencia"
                                Foreground="DarkGray"
                                FontSize="10"
                                FontFamily="Montserrat"
@@ -187,28 +187,105 @@
                                    TextWrapping="Wrap"
                                    
                                    ></TextBlock>
-                        <TextBlock Text="The genes that are analyzed are: cystinuria, hip dysplasia, congenital deafness, narcolepsy, PRA, and phenotype analysis of short coat, heat tolerance, elongated muzzle, large bones, aggressive, and obedient features."
+                        <TextBlock
                                    Foreground="LightBlue"
                                    FontSize="11"
                                    FontWeight="Light"
                                    FontFamily="Montserrat"
                                    TextAlignment="Center" 
                                    Height="34"
-                                   TextWrapping="Wrap"></TextBlock>
+                                   TextWrapping="Wrap"><Run Text="The genes that are analyzed are: cystinuria, hip dysplasia, congenital deafness, narcolepsy, PRA, and phenotype analysis of short coat, heat tolerance, elongated muzzle, large bones"/><Run Language="es-es" Text=" and "/><Run Text="aggressive"/><Run Text=" features."/></TextBlock>
                     </StackPanel>
                     <StackPanel
-                       
                         Grid.Row="1"
                         Orientation="Vertical"
                         Margin="50,120,450,30" RenderTransformOrigin="0.5,0.5">
-                        <TextBlock Text="Genetic diseases"
+
+                     
+                            <TextBlock Text="Genetic diseases"
                                    Foreground="#DA34AE"
                                    FontFamily="Montserrat"
                                    FontSize="17"
                                    FontWeight="ExtraBold"
-                                   HorizontalAlignment="Center"></TextBlock>
-
-                        <Grid>
+                                   HorizontalAlignment="Center"
+                                   Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/4.png"
+                               Width="40"/>
+                        <TextBlock Text="Cystinuria"
+                                   Foreground="#28AEED"
+                                   FontFamily="Montserrat"
+                                   FontSize="17"
+                                   FontWeight="Medium"
+                                   HorizontalAlignment="Center"
+                                   Grid.Column="0"/>
+                        <TextBlock x:Name="Cystinuriatb" 
+                                   Text="70%"
+                                   Foreground="Lavender"
+                                   FontFamily="Montserrat"
+                                   FontSize="17"
+                                   FontWeight="Medium"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/5.png"
+                               Width="40"></Image>
+                        <TextBlock Text="Hip dysplasia"
+                               Foreground="#28AEED"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"/>
+                        <TextBlock Text="70%"
+                               Foreground="Lavender"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/6.png"
+                               Width="40"></Image>
+                        <TextBlock Text="Congenital deafness"
+                               Foreground="#28AEED"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"/>
+                        <TextBlock Text="70%"
+                               Foreground="Lavender"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/7.png"
+                               Width="40"></Image>
+                        <TextBlock Text="Narcolepsy"
+                               Foreground="#28AEED"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"/>
+                        <TextBlock Text="70%"
+                               Foreground="Lavender"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/8.png"
+                               Width="40"></Image>
+                        <TextBlock Text="Progressive Retinal Atrophys"
+                               Foreground="#28AEED"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"/>
+                        <TextBlock Text="70%"
+                               Foreground="Lavender"
+                               FontFamily="Montserrat"
+                               FontSize="17"
+                               FontWeight="Medium"
+                               HorizontalAlignment="Center"></TextBlock>
+                        <!--<Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
@@ -219,6 +296,7 @@
                                 <ColumnDefinition Width="175*"/>
                                 <ColumnDefinition Width="39*"/>
                             </Grid.ColumnDefinitions>
+                            
                             <TextBlock Text="Cystinuria"
                             Foreground="#28AEED"
                             FontFamily="Montserrat"
@@ -230,8 +308,8 @@
                             FontFamily="Montserrat"
                             FontSize="17"
                             FontWeight="Medium"
-                            HorizontalAlignment="Left" 
-                            RenderTransformOrigin="0.515,-0.137" Grid.Column="2"/>
+                            HorizontalAlignment="Right" 
+                            RenderTransformOrigin="0.515,-0.137" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,10,0" Width="45"/>
                         </Grid>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -257,8 +335,8 @@
                              FontFamily="Montserrat"
                              FontSize="17"
                              FontWeight="Medium"
-                             HorizontalAlignment="Center" 
-                             RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="35"/>
+                             HorizontalAlignment="Left" 
+                             RenderTransformOrigin="0.515,-0.137" Grid.Column="4" Width="36" Grid.ColumnSpan="2" Margin="94,0,0,0"/>
                         </Grid>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -284,8 +362,8 @@
                              FontFamily="Montserrat"
                              FontSize="17"
                              FontWeight="Medium"
-                             HorizontalAlignment="Center" 
-                             RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="37"/>
+                             HorizontalAlignment="Left" 
+                             RenderTransformOrigin="0.515,-0.137" Grid.Column="4" Width="37" Grid.ColumnSpan="2" Margin="93,0,0,0"/>
                         </Grid>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -311,8 +389,8 @@
                             FontFamily="Montserrat"
                             FontSize="17"
                             FontWeight="Medium"
-                            HorizontalAlignment="Center" 
-                            RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="37"/>
+                            HorizontalAlignment="Left" 
+                            RenderTransformOrigin="0.515,-0.137" Grid.Column="4" Width="37" Grid.ColumnSpan="2" Margin="93,0,0,0"/>
                         </Grid>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -338,9 +416,9 @@
                             FontFamily="Montserrat"
                             FontSize="17"
                             FontWeight="Medium"
-                            HorizontalAlignment="Center" 
-                            RenderTransformOrigin="0.515,-0.137" Grid.Column="5" Width="37"/>
-                        </Grid>
+                            HorizontalAlignment="Left" 
+                            RenderTransformOrigin="0.515,-0.137" Grid.Column="4" Width="37" Grid.ColumnSpan="2" Margin="93,0,0,0"/>
+                        </Grid>-->
                     </StackPanel>
                     <StackPanel
                         Grid.Row="1"
@@ -350,10 +428,101 @@
                         Foreground="BlueViolet"
                         FontFamily="Montserrat"
                         FontSize="17"
-                        FontWeight="Medium"
-                        HorizontalAlignment="Center"></TextBlock>
+                        FontWeight="ExtraBold"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/11.png"
+                               Width="40"></Image>
+                        <TextBlock
+                            Text="Short coat"
+                            Foreground="#DA3"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"/>
+                        <TextBlock 
+                            Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/10.png"
+                               Width="40"></Image>
+                        <TextBlock
+                            Text="Heat Tolerance"
+                            Foreground="#DA3"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"/>
+                        <TextBlock 
+                            Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,10"></TextBlock>
+
+                        <Image Source="/Images/9.png"
+                               Width="40"></Image>
+                        <TextBlock
+                            Text="Elongated Muzzle"
+                            Foreground="#DA3"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"/>
+                        <TextBlock 
+                            Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/12.png"
+                               Width="40"></Image>
+                        <TextBlock
+                            Text="Large bones"
+                            Foreground="#DA3"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"/>
+                        <TextBlock 
+                            Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,10"></TextBlock>
+                        <Image Source="/Images/13.png"
+                               Width="40"></Image>
+                        <TextBlock
+                            Text="Agressive"
+                            Foreground="#DA3"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"/>
+                        <TextBlock 
+                            Text="70%"
+                            Foreground="Lavender"
+                            FontFamily="Montserrat"
+                            FontSize="17"
+                            FontWeight="Medium"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,10"></TextBlock>
+
+
                     </StackPanel>
-                    <Grid Margin="488,139,20,405" Grid.Row="1">
+
+                    
+                    <!--<Grid Margin="488,139,20,405" Grid.Row="1">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50*"/>
                             <RowDefinition Height="*"/>
@@ -516,7 +685,8 @@
                                 </TransformGroup>
                             </TextBlock.RenderTransform>
                         </TextBlock>
-                    </Grid>
+                    </Grid>-->
+
                 </Grid>
 
             </Border>
