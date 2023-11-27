@@ -19,9 +19,24 @@ namespace WPF_LoginForm
     /// </summary>
     public partial class Resultados : Window
     {
-        public Resultados()
+
+        public Resultados(string nombreperro, string nombrehumano)
         {
             InitializeComponent();
+            resultadosnombre.Text= resultadosnombre.Text + nombreperro;
+            resultadoshumano.Text = $"Hello {nombrehumano}, " + resultadoshumano.Text;
+        }
+
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
+
 }

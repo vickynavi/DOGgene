@@ -5,8 +5,218 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_LoginForm"
         mc:Ignorable="d"
-        Title="Resultados" Height="450" Width="800">
+        Title="Resultados" Height="600" Width="900"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
     <Grid>
-        
+        <Border CornerRadius="12">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/back-image.jpg"
+                        Stretch="UniformToFill"/>
+            </Border.Background>
+
+            <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.8">
+
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#462AD8" Offset="0"/>
+                        <GradientStop Color="#DA34AE" Offset="0.75"/>
+                        <GradientStop Color="#8A16C1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#060531" Offset="0"/>
+                        <GradientStop Color="#1B1448" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="5"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="39andThem Results"
+                               Foreground="DarkGray"
+                               FontSize="10"
+                               FontFamily="Montserrat"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                        <Button x:Name="btnMinimize"                           
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#278BEF"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+
+                        <Button x:Name="btnClose"                          
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnClose_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#DA34AE"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#C62DAE"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+
+                    <StackPanel
+                            Grid.Row="1"
+                            Orientation="Vertical"
+                            Margin="706,0,9,460" RenderTransformOrigin="0.5,0.5">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleY="-0.6"/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="-0.99"/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+
+                        <Image Source="/Images/logo_39andthem.png"
+                           Width="50" Height="50"/>
+
+                        <TextBlock Text="39andThem"
+                               Foreground="White"
+                               FontSize="25"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               HorizontalAlignment="Center"/>
+
+                        <TextBlock Text="Dog DNA Genetic Analysis"
+                               Foreground="LightGray"
+                               FontSize="7.5"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               Margin="0,5,0,0"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,15,0,0"/>
+
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Row="1"
+                        Orientation="Vertical"
+                        Margin="20,10,177,472" RenderTransformOrigin="0.5,0.5">
+
+                        <TextBlock x:Name="resultadosnombre" Text="Results of "
+                                   Foreground="White"
+                                   FontSize="35"
+                                   FontWeight="Bold"
+                                   FontFamily="Montserrat"
+                                   HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock x:Name="resultadoshumano" Text="this analysis was made using a DOGgene dataset created to analyze your dog's genome using the blastn software from NCBI"
+                                   Foreground="LightBlue"
+                                   FontSize="11"
+                                   FontWeight="Light"
+                                   FontFamily="Montserrat"
+                                   HorizontalAlignment="Center" Width="674" 
+                                   ></TextBlock>
+                        <TextBlock Text="The genes that are analized are: cistinuria, ..."
+                                   Foreground="LightBlue"
+                                   FontSize="11"
+                                   FontWeight="Light"
+                                   FontFamily="Montserrat"
+                                   HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Row="1"
+                        Orientation="Vertical"
+                        Margin="20,120,450,30" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock Text="Genetic diseases"
+                                   Foreground="#DA34AE"
+                                   FontFamily="Montserrat"
+                                   FontSize="17"
+                                   FontWeight="Medium"
+                                   HorizontalAlignment="Center"></TextBlock>
+
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Row="1"
+                        Orientation="Vertical"
+                        Margin="470,120,20,30" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock Text="Phenotype"
+                        Foreground="BlueViolet"
+                        FontFamily="Montserrat"
+                        FontSize="17"
+                        FontWeight="Medium"
+                        HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Grid>
+
+            </Border>
+
+        </Border>
     </Grid>
 </Window>

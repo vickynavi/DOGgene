@@ -66,3 +66,5 @@ C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\WPF-LoginF
 C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\WPF-LoginForm.csproj.CoreCompileInputs.cache
 C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\WPF-LoginForm.exe
 C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\WPF-LoginForm.pdb
+C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\Resultados.g.cs
+C:\Users\victo\Source\Repos\vickynavi\DOGgene\WPF-LoginForm\obj\Debug\Resultados.baml

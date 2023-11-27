@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
@@ -57,8 +58,8 @@ namespace WPF_LoginForm.View
             proc.WaitForExit();
             string result = proc.StandardOutput.ReadToEnd();
             string[] valores = result.Split(new[] { '\n', }, StringSplitOptions.RemoveEmptyEntries);
-            Dictionary<string, string> dictionary =
-                      valores.ToDictionary(s => s.Split(',')[0], s => s.Split(',')[1]);
+            Dictionary<string, float> dictionary =
+                      valores.ToDictionary(s => s.Split(',')[0], s => float.Parse(s.Split(',')[1], CultureInfo.InvariantCulture));
             label1.Content= dictionary["Cistinuria1"];
             textBox1.Text = result;
         }
@@ -69,7 +70,11 @@ namespace WPF_LoginForm.View
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             Main();
-
+            string nombreperro = dogsnametb.Text.ToString();
+            string nombrehumano = ownersnametb.Text.ToString();
+            Resultados resultados = new Resultados(nombreperro, nombrehumano);
+            this.Close();
+            resultados.Show();
         }
 
         private void seq_Click(object sender, RoutedEventArgs e)

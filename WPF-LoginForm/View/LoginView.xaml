@@ -10,8 +10,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
-        AllowsTransparency="True"
-        MouseDown="Window_MouseDown">
+        AllowsTransparency="True">
 
     <Border CornerRadius="12">
         <Border.Background>
@@ -163,7 +162,7 @@
                                TextAlignment="Center"
                                Margin="0,35,0,0"/>
 
-                    <TextBox x:Name="ownersname"
+                    <TextBox x:Name="ownersnametb"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
@@ -191,7 +190,7 @@
                                FontFamily="Montserrat"                             
                                Margin="0,15,0,0"/>
 
-                    <TextBox x:Name="dogsname"
+                    <TextBox x:Name="dogsnametb"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
@@ -282,7 +281,8 @@
 
                 </StackPanel>
                 <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="320" Margin="10,83,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="213" TextChanged="TextBox_TextChanged"/>
-                <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="291" Margin="548,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="238"/>
+                <Label Content="Label" HorizontalAlignment="Left" Height="0" Margin="614,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="12"/>
+                <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="33" Margin="576,115,0,0" Grid.Row="1" VerticalAlignment="Top" Width="68"/>
 
             </Grid>
 
