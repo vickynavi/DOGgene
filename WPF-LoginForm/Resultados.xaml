@@ -169,7 +169,7 @@
                     <StackPanel
                         Grid.Row="1"
                         Orientation="Vertical"
-                        Margin="20,10,177,472" RenderTransformOrigin="0.5,0.5">
+                        Margin="20,5,177,472" RenderTransformOrigin="0.5,0.5">
 
                         <TextBlock x:Name="resultadosnombre" Text="Results of "
                                    Foreground="White"
@@ -199,7 +199,7 @@
                     <StackPanel
                         Grid.Row="1"
                         Orientation="Vertical"
-                        Margin="50,120,450,30" RenderTransformOrigin="0.5,0.5">
+                        Margin="50,100,450,20" RenderTransformOrigin="0.5,0.5">
 
                      
                             <TextBlock Text="Genetic diseases"
@@ -210,7 +210,7 @@
                                    HorizontalAlignment="Center"
                                    Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/4.png"
-                               Width="40"/>
+                               Width="50"/>
                         <TextBlock Text="Cystinuria"
                                    Foreground="#28AEED"
                                    FontFamily="Montserrat"
@@ -227,7 +227,7 @@
                                    HorizontalAlignment="Center"
                                    Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/5.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock Text="Hip dysplasia"
                                Foreground="#28AEED"
                                FontFamily="Montserrat"
@@ -242,7 +242,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/6.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock Text="Congenital deafness"
                                Foreground="#28AEED"
                                FontFamily="Montserrat"
@@ -257,7 +257,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/7.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock Text="Narcolepsy"
                                Foreground="#28AEED"
                                FontFamily="Montserrat"
@@ -272,7 +272,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/8.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock Text="Progressive Retinal Atrophy"
                                Foreground="#28AEED"
                                FontFamily="Montserrat"
@@ -423,7 +423,7 @@
                     <StackPanel
                         Grid.Row="1"
                         Orientation="Vertical"
-                        Margin="470,120,50,30" RenderTransformOrigin="0.5,0.5">
+                        Margin="470,100,50,20" RenderTransformOrigin="0.5,0.5">
                         <TextBlock Text="Phenotype"
                         Foreground="BlueViolet"
                         FontFamily="Montserrat"
@@ -432,7 +432,7 @@
                         HorizontalAlignment="Center"
                         Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/11.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock
                             Text="Short coat"
                             Foreground="#DA3"
@@ -449,7 +449,7 @@
                             HorizontalAlignment="Center"
                             Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/10.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock
                             Text="Heat Tolerance"
                             Foreground="#DA3"
@@ -467,7 +467,7 @@
                             Margin="0,0,0,10"></TextBlock>
 
                         <Image Source="/Images/9.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock
                             Text="Elongated Muzzle"
                             Foreground="#DA3"
@@ -484,7 +484,7 @@
                             HorizontalAlignment="Center"
                             Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/12.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock
                             Text="Large bones"
                             Foreground="#DA3"
@@ -501,7 +501,7 @@
                             HorizontalAlignment="Center"
                             Margin="0,0,0,10"></TextBlock>
                         <Image Source="/Images/13.png"
-                               Width="40"></Image>
+                               Width="50"></Image>
                         <TextBlock
                             Text="Agressive"
                             Foreground="#DA3"
